@@ -11,7 +11,7 @@ composer require inbep/doctrine-console-service-provider "dev-master"
 
 How to use
 ----------
-Create you console file:
+Create your console file:
 
 ```php
 use Silex\Application;

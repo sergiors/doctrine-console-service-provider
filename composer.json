@@ -1,6 +1,6 @@
 {
   "name": "inbep/doctrine-console-service-provider",
-  "description": "Doctrine Console for Silex",
+  "description": "Doctrine ORM Console for Silex",
   "license": "MIT",
   "authors": [
     {
