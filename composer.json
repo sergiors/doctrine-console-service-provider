@@ -1,5 +1,5 @@
 {
-  "name": "inbep/doctrine-console-service-provider",
+  "name": "sergiors/doctrine-console-service-provider",
   "description": "Doctrine ORM Console for Silex",
   "license": "MIT",
   "authors": [
@@ -10,13 +10,13 @@
   ],
   "autoload": {
     "psr-4": {
-      "Inbep\\Silex\\": "src"
+      "Sergiors\\Silex\\": "src"
     }
   },
   "require": {
     "php": ">=5.5",
     "silex/silex": "~1.3",
-    "inbep/console-service-provider": "~1.0",
+    "sergiors/console-service-provider": "~1.0",
     "inbep/doctrine-cache-service-provider": "dev-master",
     "inbep/doctrine-orm-service-provider": "dev-master"
   },
