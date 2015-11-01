@@ -6,7 +6,7 @@ To see the complete documentation, check out [Doctrine Console](http://doctrine-
 Install
 -------
 ```bash
-composer require inbep/doctrine-console-service-provider "dev-master"
+composer require sergiors/doctrine-console-service-provider "dev-master"
 ```
 
 How to use
@@ -16,10 +16,10 @@ Create your console file:
 ```php
 use Silex\Application;
 use Silex\Provider\DoctrineServiceProvider;
-use Inbep\Silex\Provider\ConsoleServiceProvider;
 use Inbep\Silex\Provider\DoctrineCacheServiceProvider;
 use Inbep\Silex\Provider\DoctrineOrmServiceProvider;
-use Inbep\Silex\Provider\DoctrineConsoleServiceProvider;
+use Sergiors\Silex\Provider\ConsoleServiceProvider;
+use Sergiors\Silex\Provider\DoctrineConsoleServiceProvider;
 
 $app = new Application();
 $app->register(new ConsoleServiceProvider());
