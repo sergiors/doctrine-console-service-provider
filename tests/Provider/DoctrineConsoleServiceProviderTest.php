@@ -6,8 +6,6 @@ use Silex\WebTestCase;
 use Silex\Provider\DoctrineServiceProvider;
 use Symfony\Component\Console\Application as ConsoleApplication;
 use Doctrine\ORM\Tools\Console\Command\InfoCommand;
-use Inbep\Silex\Provider\DoctrineCacheServiceProvider;
-use Inbep\Silex\Provider\DoctrineOrmServiceProvider;
 
 class DoctrineConsoleServiceProviderTest extends WebTestCase
 {

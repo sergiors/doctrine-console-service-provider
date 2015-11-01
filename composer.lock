@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b123d63b0ec0e0713a667434b69c64d3",
+    "hash": "b1eb0d0c9a6237d9919f9c17f8df34e0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -607,100 +607,6 @@
             "time": "2015-08-31 12:59:39"
         },
         {
-            "name": "inbep/doctrine-cache-service-provider",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/inbep/doctrine-cache-service-provider.git",
-                "reference": "47dbc6db9b7b193bfcd5ca618ad16857fb547159"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/inbep/doctrine-cache-service-provider/zipball/47dbc6db9b7b193bfcd5ca618ad16857fb547159",
-                "reference": "47dbc6db9b7b193bfcd5ca618ad16857fb547159",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/cache": "~1.4",
-                "silex/silex": "~1.3"
-            },
-            "require-dev": {
-                "pdepend/pdepend": "~2.0",
-                "phing/phing": "~2.10",
-                "phploc/phploc": "~2.1",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/phpunit": "~4.8",
-                "sebastian/phpcpd": "~2.0",
-                "squizlabs/php_codesniffer": "~2.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Inbep\\Silex\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sérgio Rafael Siqueira",
-                    "email": "sergio@inbep.com.br"
-                }
-            ],
-            "description": "Doctrine Cache for Silex",
-            "time": "2015-10-22 20:34:21"
-        },
-        {
-            "name": "inbep/doctrine-orm-service-provider",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/inbep/doctrine-orm-service-provider.git",
-                "reference": "c4c432bdf553a24f58df9e91c060d071ff0b563b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/inbep/doctrine-orm-service-provider/zipball/c4c432bdf553a24f58df9e91c060d071ff0b563b",
-                "reference": "c4c432bdf553a24f58df9e91c060d071ff0b563b",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/orm": "~2.5",
-                "inbep/doctrine-cache-service-provider": "dev-master",
-                "php": ">=5.5",
-                "silex/silex": "~1.2"
-            },
-            "require-dev": {
-                "pdepend/pdepend": "~2.0",
-                "phing/phing": "~2.10",
-                "phploc/phploc": "~2.1",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/phpunit": "~4.8",
-                "sebastian/phpcpd": "~2.0",
-                "squizlabs/php_codesniffer": "~2.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Inbep\\Silex\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sérgio Rafael Siqueira",
-                    "email": "sergio@inbep.com.br"
-                }
-            ],
-            "description": "Doctrine ORM for Silex",
-            "time": "2015-10-27 21:37:23"
-        },
-        {
             "name": "pimple/pimple",
             "version": "v1.1.1",
             "source": {
@@ -831,6 +737,100 @@
             ],
             "description": "Console for Silex",
             "time": "2015-11-01 02:20:22"
+        },
+        {
+            "name": "sergiors/doctrine-cache-service-provider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sergiors/doctrine-cache-service-provider.git",
+                "reference": "7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sergiors/doctrine-cache-service-provider/zipball/7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d",
+                "reference": "7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "~1.4",
+                "silex/silex": "~1.3"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "~2.0",
+                "phing/phing": "~2.10",
+                "phploc/phploc": "~2.1",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": "~4.8",
+                "sebastian/phpcpd": "~2.0",
+                "squizlabs/php_codesniffer": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sergiors\\Silex\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sérgio Rafael Siqueira",
+                    "email": "sergio@inbep.com.br"
+                }
+            ],
+            "description": "Doctrine Cache for Silex",
+            "time": "2015-11-01 02:59:52"
+        },
+        {
+            "name": "sergiors/doctrine-orm-service-provider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sergiors/doctrine-orm-service-provider.git",
+                "reference": "e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sergiors/doctrine-orm-service-provider/zipball/e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0",
+                "reference": "e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/orm": "~2.5",
+                "php": ">=5.5",
+                "sergiors/doctrine-cache-service-provider": "dev-master",
+                "silex/silex": "~1.2"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "~2.0",
+                "phing/phing": "~2.10",
+                "phploc/phploc": "~2.1",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": "~4.8",
+                "sebastian/phpcpd": "~2.0",
+                "squizlabs/php_codesniffer": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sergiors\\Silex\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sérgio Rafael Siqueira",
+                    "email": "sergio@inbep.com.br"
+                }
+            ],
+            "description": "Doctrine ORM for Silex",
+            "time": "2015-11-01 03:08:03"
         },
         {
             "name": "silex/silex",
@@ -2874,8 +2874,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "inbep/doctrine-cache-service-provider": 20,
-        "inbep/doctrine-orm-service-provider": 20
+        "sergiors/doctrine-cache-service-provider": 20,
+        "sergiors/doctrine-orm-service-provider": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -17,8 +17,8 @@
     "php": ">=5.5",
     "silex/silex": "~1.3",
     "sergiors/console-service-provider": "~1.0",
-    "inbep/doctrine-cache-service-provider": "dev-master",
-    "inbep/doctrine-orm-service-provider": "dev-master"
+    "sergiors/doctrine-cache-service-provider": "dev-master",
+    "sergiors/doctrine-orm-service-provider": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.8",
