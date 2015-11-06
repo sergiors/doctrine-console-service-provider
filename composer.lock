@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1eb0d0c9a6237d9919f9c17f8df34e0",
+    "hash": "325df9c52f46c3e61daa94c94328cdf7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -740,7 +740,7 @@
         },
         {
             "name": "sergiors/doctrine-cache-service-provider",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sergiors/doctrine-cache-service-provider.git",
@@ -790,18 +790,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sergiors/doctrine-orm-service-provider.git",
-                "reference": "55204ccc7d2390437f4e47277e7c4efa969e3a33"
+                "reference": "eb9468f6bba1bc430f0bdf8530c31f3852bafb09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sergiors/doctrine-orm-service-provider/zipball/55204ccc7d2390437f4e47277e7c4efa969e3a33",
-                "reference": "55204ccc7d2390437f4e47277e7c4efa969e3a33",
+                "url": "https://api.github.com/repos/sergiors/doctrine-orm-service-provider/zipball/eb9468f6bba1bc430f0bdf8530c31f3852bafb09",
+                "reference": "eb9468f6bba1bc430f0bdf8530c31f3852bafb09",
                 "shasum": ""
             },
             "require": {
                 "doctrine/orm": "~2.5",
                 "php": ">=5.5",
-                "sergiors/doctrine-cache-service-provider": "dev-master",
+                "sergiors/doctrine-cache-service-provider": "~1.0",
                 "silex/silex": "~1.2"
             },
             "require-dev": {
@@ -830,7 +830,7 @@
                 }
             ],
             "description": "Doctrine ORM for Silex",
-            "time": "2015-11-06 04:33:55"
+            "time": "2015-11-06 19:42:43"
         },
         {
             "name": "silex/silex",
@@ -2874,7 +2874,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "sergiors/doctrine-cache-service-provider": 20,
         "sergiors/doctrine-orm-service-provider": 20
     },
     "prefer-stable": false,
