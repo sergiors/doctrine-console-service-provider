@@ -16,8 +16,8 @@ Create your console file:
 ```php
 use Silex\Application;
 use Silex\Provider\DoctrineServiceProvider;
-use Inbep\Silex\Provider\DoctrineCacheServiceProvider;
-use Inbep\Silex\Provider\DoctrineOrmServiceProvider;
+use Sergiors\Silex\Provider\DoctrineCacheServiceProvider;
+use Sergiors\Silex\Provider\DoctrineOrmServiceProvider;
 use Sergiors\Silex\Provider\ConsoleServiceProvider;
 use Sergiors\Silex\Provider\DoctrineConsoleServiceProvider;
 

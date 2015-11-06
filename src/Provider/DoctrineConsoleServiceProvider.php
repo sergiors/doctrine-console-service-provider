@@ -38,13 +38,13 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
     {
         if (!isset($app['console'])) {
             throw new \LogicException(
-                'You must register the ConsoleServiceProvider to use the DoctrineConsoleServiceProvider'
+                'You must register the ConsoleServiceProvider to use the DoctrineConsoleServiceProvider.'
             );
         }
 
         if (!isset($app['orm'])) {
             throw new \LogicException(
-                'You must register the DoctrineOrmServiceProvider to use the DoctrineConsoleServiceProvider'
+                'You must register the DoctrineOrmServiceProvider to use the DoctrineConsoleServiceProvider.'
             );
         }
 

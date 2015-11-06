@@ -76,16 +76,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f"
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/eb8a73619af4f1c8711e2ce482f5de3643258a1f",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
                 "shasum": ""
             },
             "require": {
@@ -142,7 +142,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-10-28 11:27:45"
+            "time": "2015-11-02 18:35:48"
         },
         {
             "name": "doctrine/collections",
@@ -356,16 +356,16 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -377,7 +377,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -419,7 +419,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "doctrine/instantiator",
@@ -744,12 +744,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sergiors/doctrine-cache-service-provider.git",
-                "reference": "7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d"
+                "reference": "d3f99a5796187772d4508d2c5431dd34877422c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sergiors/doctrine-cache-service-provider/zipball/7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d",
-                "reference": "7c133b61c5ffa7ace6fff1ab0e3e7ea7916d2e6d",
+                "url": "https://api.github.com/repos/sergiors/doctrine-cache-service-provider/zipball/d3f99a5796187772d4508d2c5431dd34877422c8",
+                "reference": "d3f99a5796187772d4508d2c5431dd34877422c8",
                 "shasum": ""
             },
             "require": {
@@ -782,7 +782,7 @@
                 }
             ],
             "description": "Doctrine Cache for Silex",
-            "time": "2015-11-01 02:59:52"
+            "time": "2015-11-06 04:27:55"
         },
         {
             "name": "sergiors/doctrine-orm-service-provider",
@@ -790,12 +790,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sergiors/doctrine-orm-service-provider.git",
-                "reference": "e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0"
+                "reference": "55204ccc7d2390437f4e47277e7c4efa969e3a33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sergiors/doctrine-orm-service-provider/zipball/e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0",
-                "reference": "e02b98a9a7551b8167e692fe9d7fbb9c1d2f4fd0",
+                "url": "https://api.github.com/repos/sergiors/doctrine-orm-service-provider/zipball/55204ccc7d2390437f4e47277e7c4efa969e3a33",
+                "reference": "55204ccc7d2390437f4e47277e7c4efa969e3a33",
                 "shasum": ""
             },
             "require": {
@@ -830,7 +830,7 @@
                 }
             ],
             "description": "Doctrine ORM for Silex",
-            "time": "2015-11-01 03:08:03"
+            "time": "2015-11-06 04:33:55"
         },
         {
             "name": "silex/silex",
