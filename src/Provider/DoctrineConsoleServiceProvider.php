@@ -43,10 +43,9 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
         }
 
         $app['console'] = $app->share($app->extend('console', function ($console) use ($app) {
-            $console->setHelperSet(new HelperSet([
-                'db' => new ConnectionHelper($app['db']),
-                'em' => new EntityManagerHelper($app['orm'])
-            ]));
+            $helper = $console->getHelperSet();
+            $helper->set(new ConnectionHelper($app['db']));
+            $helper->set(new EntityManagerHelper($app['orm']));
 
             $console->add(new ImportCommand());
             $console->add(new ReservedWordsCommand());
