@@ -26,8 +26,14 @@ use Doctrine\ORM\Tools\Console\Command\ValidateSchemaCommand;
 use Doctrine\ORM\Tools\Console\Command\InfoCommand;
 use Doctrine\ORM\Tools\Console\Command\MappingDescribeCommand;
 
+/**
+ * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
+ */
 class DoctrineConsoleServiceProvider implements ServiceProviderInterface
 {
+    /**
+     * {@inheritdoc}
+     */
     public function register(Application $app)
     {
         if (!isset($app['console'])) {
@@ -71,6 +77,9 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
         }));
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function boot(Application $app)
     {
     }
