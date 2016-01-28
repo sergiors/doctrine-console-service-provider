@@ -27,7 +27,9 @@ $app->register(new DoctrineServiceProvider());
 $app->register(new DoctrineCacheServiceProvider());
 $app->register(new DoctrineOrmServiceProvider());
 $app->register(new DoctrineConsoleServiceProvider());
+
 $app->boot();
+
 $app['console']->run();
 ```
 
