@@ -2,8 +2,7 @@
 
 namespace Sergiors\Silex\Tests\Provider;
 
-use Silex\Application;
-use Silex\WebTestCase;
+use Pimple\Container;
 use Silex\Provider\DoctrineServiceProvider;
 use Symfony\Component\Console\Application as ConsoleApplication;
 use Doctrine\ORM\Tools\Console\Command\InfoCommand;
@@ -12,14 +11,14 @@ use Sergiors\Silex\Provider\DoctrineCacheServiceProvider;
 use Sergiors\Silex\Provider\DoctrineOrmServiceProvider;
 use Sergiors\Silex\Provider\DoctrineConsoleServiceProvider;
 
-class DoctrineConsoleServiceProviderTest extends WebTestCase
+class DoctrineConsoleServiceProviderTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
      */
     public function register()
     {
-        $app = $this->createApplication();
+        $app = new Container();
         $app->register(new ConsoleServiceProvider());
         $app->register(new DoctrineServiceProvider());
         $app->register(new DoctrineCacheServiceProvider());
@@ -31,14 +30,5 @@ class DoctrineConsoleServiceProviderTest extends WebTestCase
 
         $this->assertInstanceOf(ConsoleApplication::class, $app['console']);
         $this->assertInstanceOf(InfoCommand::class, $app['console']->get('orm:info'));
-    }
-
-    public function createApplication()
-    {
-        $app = new Application();
-        $app['debug'] = true;
-        $app['exception_handler']->disable();
-
-        return $app;
     }
 }

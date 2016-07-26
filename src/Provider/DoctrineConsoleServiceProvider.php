@@ -2,8 +2,8 @@
 
 namespace Sergiors\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Doctrine\DBAL\Tools\Console\Helper\ConnectionHelper;
 use Doctrine\DBAL\Tools\Console\Command\ImportCommand;
 use Doctrine\DBAL\Tools\Console\Command\ReservedWordsCommand;
@@ -34,7 +34,7 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function register(Application $app)
+    public function register(Container $app)
     {
         if (!isset($app['console'])) {
             throw new \LogicException(
@@ -48,7 +48,7 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
             );
         }
 
-        $app['console'] = $app->share($app->extend('console', function ($console) use ($app) {
+        $app['console'] = $app->extend('console', function ($console) use ($app) {
             $helper = $console->getHelperSet();
             $helper->set(new ConnectionHelper($app['db']), 'db');
             $helper->set(new EntityManagerHelper($app['orm']), 'em');
@@ -74,13 +74,6 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
             $console->add(new MappingDescribeCommand());
 
             return $console;
-        }));
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function boot(Application $app)
-    {
+        });
     }
 }
