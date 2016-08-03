@@ -25,6 +25,7 @@ use Doctrine\ORM\Tools\Console\Command\RunDqlCommand;
 use Doctrine\ORM\Tools\Console\Command\ValidateSchemaCommand;
 use Doctrine\ORM\Tools\Console\Command\InfoCommand;
 use Doctrine\ORM\Tools\Console\Command\MappingDescribeCommand;
+use Symfony\Component\Console\Application as ConsoleApplication;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
@@ -48,7 +49,7 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
             );
         }
 
-        $app['console'] = $app->extend('console', function ($console) use ($app) {
+        $app['console'] = $app->extend('console', function (ConsoleApplication $console) use ($app) {
             $helper = $console->getHelperSet();
             $helper->set(new ConnectionHelper($app['db']), 'db');
             $helper->set(new EntityManagerHelper($app['orm']), 'em');
