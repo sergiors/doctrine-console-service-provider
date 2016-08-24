@@ -1,6 +1,6 @@
 {
     "name": "sergiors/doctrine-console-service-provider",
-    "description": "Doctrine ORM Console for Silex",
+    "description": "Doctrine ORM Console for Pimple",
     "license": "MIT",
     "authors": [
         {
