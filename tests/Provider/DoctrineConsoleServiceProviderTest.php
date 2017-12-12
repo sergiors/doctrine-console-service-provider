@@ -1,34 +1,35 @@
 <?php
 
-namespace Sergiors\Silex\Tests\Provider;
+namespace Sergiors\Pimple\Tests\Provider;
 
 use Pimple\Container;
 use Silex\Provider\DoctrineServiceProvider;
-use Symfony\Component\Console\Application as ConsoleApplication;
+use Symfony\Component\Console\Application;
 use Doctrine\ORM\Tools\Console\Command\InfoCommand;
-use Sergiors\Silex\Provider\ConsoleServiceProvider;
-use Sergiors\Silex\Provider\DoctrineCacheServiceProvider;
-use Sergiors\Silex\Provider\DoctrineOrmServiceProvider;
-use Sergiors\Silex\Provider\DoctrineConsoleServiceProvider;
+use Sergiors\Pimple\Provider\DoctrineCacheServiceProvider;
+use Sergiors\Pimple\Provider\DoctrineOrmServiceProvider;
+use Sergiors\Pimple\Provider\DoctrineConsoleServiceProvider;
 
-class DoctrineConsoleServiceProviderTest extends \PHPUnit_Framework_TestCase
+class DoctrineConsoleServiceProviderTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test
      */
     public function register()
     {
-        $app = new Container();
-        $app->register(new ConsoleServiceProvider());
-        $app->register(new DoctrineServiceProvider());
-        $app->register(new DoctrineCacheServiceProvider());
-        $app->register(new DoctrineOrmServiceProvider());
-        $app->register(new DoctrineConsoleServiceProvider());
+        $container = new Container();
+        $container['console'] = function () {
+            return new Application();
+        };
+        $container->register(new DoctrineServiceProvider());
+        $container->register(new DoctrineCacheServiceProvider());
+        $container->register(new DoctrineOrmServiceProvider());
+        $container->register(new DoctrineConsoleServiceProvider());
 
-        $app['orm.proxy_dir'] = sys_get_temp_dir();
-        $app['orm.proxy_namespace'] = 'Acme\Entity';
+        $container['orm.proxy_dir'] = sys_get_temp_dir();
+        $container['orm.proxy_namespace'] = 'Acme\Entity';
 
-        $this->assertInstanceOf(ConsoleApplication::class, $app['console']);
-        $this->assertInstanceOf(InfoCommand::class, $app['console']->get('orm:info'));
+        $this->assertInstanceOf(Application::class, $container['console']);
+        $this->assertInstanceOf(InfoCommand::class, $container['console']->get('orm:info'));
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sergiors\Silex\Provider;
+namespace Sergiors\Pimple\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -35,24 +35,24 @@ class DoctrineConsoleServiceProvider implements ServiceProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function register(Container $app)
+    public function register(Container $container)
     {
-        if (!isset($app['console'])) {
+        if (!isset($container['console'])) {
             throw new \LogicException(
                 'You must register the ConsoleServiceProvider to use the DoctrineConsoleServiceProvider.'
             );
         }
 
-        if (!isset($app['orm'])) {
+        if (!isset($container['orm'])) {
             throw new \LogicException(
                 'You must register the DoctrineOrmServiceProvider to use the DoctrineConsoleServiceProvider.'
             );
         }
 
-        $app['console'] = $app->extend('console', function (ConsoleApplication $console) use ($app) {
+        $container['console'] = $container->extend('console', function (ConsoleApplication $console) use ($container) {
             $helper = $console->getHelperSet();
-            $helper->set(new ConnectionHelper($app['db']), 'db');
-            $helper->set(new EntityManagerHelper($app['orm']), 'em');
+            $helper->set(new ConnectionHelper($container['db']), 'db');
+            $helper->set(new EntityManagerHelper($container['orm']), 'em');
 
             $console->add(new ImportCommand());
             $console->add(new ReservedWordsCommand());
